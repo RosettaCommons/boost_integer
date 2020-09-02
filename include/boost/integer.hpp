@@ -93,7 +93,7 @@ namespace boost
 #endif
 #if ULONG_MAX != UINT_MAX && ( !defined __TI_COMPILER_VERSION__ || \
     ( __TI_COMPILER_VERSION__ >= 7000000 && !defined __TI_40BIT_LONG__ ) )
- #ifndef PYROSETTA
+ #ifndef PYROSETTA_THIS_DEFINE_IS_DISABLED
   template <> struct exact_signed_base_helper<sizeof(long)* CHAR_BIT> { typedef long exact; };
   template <> struct exact_unsigned_base_helper<sizeof(unsigned long)* CHAR_BIT> { typedef unsigned long exact; };
  #endif
